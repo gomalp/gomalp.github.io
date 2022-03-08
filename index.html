@@ -23,11 +23,23 @@
          // Adding layer to the map
          map.addLayer(layer);
 
+	var myIcon = L.icon({
+    		iconUrl: '/icon/icon-red.png',
+    		iconSize: [38, 95],
+    		iconAnchor: [22, 94],
+    		popupAnchor: [-3, -76],
+    		//shadowUrl: 'my-icon-shadow.png',
+    		//shadowSize: [68, 95],
+    		//shadowAnchor: [22, 94]
+	});
+
          // Creating a Marker
          var markerOptions = {
             title: "MyLocation",
             clickable: true,
-            draggable: false
+            draggable: false,
+	    icon: myIcon
+
          }
          // Creating a marker
          var marker = L.marker([52.0501111,	29.2614722] , markerOptions);
